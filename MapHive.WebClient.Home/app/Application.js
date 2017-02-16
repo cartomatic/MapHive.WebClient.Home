@@ -21,11 +21,12 @@
 
         //global shared controllers - they fire up automatically
         controllers: [
-            //use the customised Root
-            'Home.controller.Root',
+            'mh.controller.Root',
 
             //default auth
             'mh.controller.Auth',
+
+            'mh.controller.Organisation',
 
             //default splash
             'mh.controller.Splash'
@@ -36,8 +37,11 @@
 
         /**
          * internal app launch procedure
+         * @param cfg
+         * @param cfg.userConfig
+         * @param cfg.orgCtx
          */
-        internalAppLaunch: function(){
+        internalAppLaunch: function(cfg){
 
             //suppress aria warnings!
             Ext.ariaWarn = Ext.emptyFn;
