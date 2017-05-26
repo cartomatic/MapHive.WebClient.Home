@@ -10,11 +10,12 @@
     Ext.define('Home.view.main.Main', {
         extend: 'Ext.panel.Panel',
 
-        requires: [
-            'Ext.plugin.Viewport'
-        ],
+    requires: [
+        'Ext.plugin.Viewport',
+        'Home.view.main.MainController'
+    ],
 
-        plugins: 'viewport',
+    plugins: 'viewport',
 
         controller: 'viewport',
 
